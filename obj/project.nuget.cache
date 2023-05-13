@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "jelBujnVE8cGFPeR1tnMr5jA77oGzrEtydjjs/H+mibI0SJV2gfb8M94qLzDS32L/NsRgFLAvhGb+p0bGBjO8w==",
+  "success": true,
+  "projectFilePath": "/Users/marwan/Desktop/aiExplainer/aiExplainer.csproj",
+  "expectedPackageFiles": [
+    "/Users/marwan/.nuget/packages/skiasharp/2.88.3/skiasharp.2.88.3.nupkg.sha512",
+    "/Users/marwan/.nuget/packages/skiasharp.nativeassets.macos/2.88.3/skiasharp.nativeassets.macos.2.88.3.nupkg.sha512",
+    "/Users/marwan/.nuget/packages/skiasharp.nativeassets.win32/2.88.3/skiasharp.nativeassets.win32.2.88.3.nupkg.sha512"
+  ],
+  "logs": []
+}

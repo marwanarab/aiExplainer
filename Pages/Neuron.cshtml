@@ -1,0 +1,83 @@
+@page
+@model NeuronModel
+
+@{
+    ViewData["Title"] = "Neuron";
+}
+<h1>العصبون رقم @Model.NeuronId</h1>
+<form method="post" style="width: 30%;">
+    <br />
+    <br />
+    وصلات داخلية
+    <input id="nn1" type="number" asp-for="@Model.NeuronValue" style="width: 70px" />
+    <br />
+    <br />
+    وصلات خارجية
+    <br />
+    <table>
+        <tr>
+            <th style="width: 100px">
+                <label>العصبون</label>
+            </th>
+            <th style="width: 100px">
+                <label>وصلات داخلية</label>
+            </th>
+            <th style="width: 100px">
+                <label>وصلة خارجية</label>
+            </th>
+            <th style="width: 100px">
+                <label>الناتج</label>
+            </th>
+        </tr>
+
+        @for (int i = 1; i <= 9; i++)
+        {
+            <tr>
+
+                <td>
+                    <label>رقم @(i)</label>
+                </td>
+                <td>
+                    @if (i != Model.NeuronId)
+                    {
+                        <label>@Model.NeuronValues[i]</label>
+                    }
+                    else
+                    {
+                        @* <input id="nn_id" type="number" asp-for="@Model.NeuronValue" style="width: 70px" /> *@
+                        <label>@Model.NeuronValues[i]</label>
+                    }
+                </td>
+                <td>
+                    @if (i != Model.NeuronId)
+                    {
+                        <input type="checkbox" asp-for="Connections[i]" />
+                    }
+                    else
+                    {
+                        <input type="checkbox" asp-for="Connections[i]" hidden />
+                        @* <hidden asp-for="Connections[i]" /> *@
+                    }
+                </td>
+                <td>
+                    <label>@((Model.Connections[i] ? Model.NeuronValues[i] : 0))</label>
+                </td>
+            </tr>
+        }
+
+        <tr>
+            <th>
+                <label>الناتج العام</label>
+            </th>
+            <th>
+            </th>
+            <th>
+            </th>
+            <th>
+                <label>@Model.NeuronResult</label>
+            </th>
+        </tr>
+    </table>
+    <br />
+    <input type="submit" value="حفظ" />
+</form>
