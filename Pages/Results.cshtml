@@ -1,0 +1,83 @@
+﻿@page
+@model ResultsModel
+
+@if (Model.numberOfRearrangements == Model._nn.GlobalResult)
+{
+    <img id="overlay-image" src="images/celebrate-overlay.gif" alt="Success">
+}
+
+<div style="display: flex; justify-content: space-between;">
+
+    <form method="post" style="width: 30%;">
+        <table>
+            <tr>
+                <th style="">
+                    العصبون
+                </th>
+                <th style="">
+                    الوزن
+                </th>
+                <th colspan="9" style="text-align: center;">الوزن المكتسب من</th>
+                <th>
+                    الناتج
+                </th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                @for (int i = 1; i <= 9; i++)
+                {
+                    <th style="text-align: center;">@i</th>
+                }
+                <th></th>
+            </tr>
+            @for(int i =1; i<=9; i++)
+            {
+                <tr>
+                    <td>رقم @(i)</td>
+                    <td>@Model._nn.NeuronValues[i]</td>
+                    @for (int j = 1; j <= 9; j++)
+                    {
+                        <td style="text-align: center;"> @((Model._nn.Connections[i - 1, j - 1] ? Model._nn.NeuronValues[j] : 0))</td>
+                    }
+                    <td style="text-align: center;">@Model._nn[i]</td>
+                </tr>
+            }
+            <tr>
+                <th colspan="11">الناتج العام</th>
+                <th style="text-align: center;">@Model._nn.GlobalResult</th>
+            </tr>
+        </table>
+        <br />
+        <button type="submit">تحديث</button>
+        @if (Model.numberOfRearrangements == Model._nn.GlobalResult)
+        {
+            <img src="images/celebrate-small.gif" alt="Succes" style="max-width: 50%">
+        }
+    </form>
+
+    <div style="width: 60%; text-align: center;">
+        <h1>اكتشف الصورة</h1>
+        <img src="images/newRender.webp" alt="Result Image" style="max-width: 100%;">
+    </div>
+</div>
+
+<style>
+    #overlay-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    td, th {
+        @* border: 1px solid black; *@
+        padding-left: 5px; padding-right: 5px
+    }
+</style>
