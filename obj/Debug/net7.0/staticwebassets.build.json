@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "P0T4R+mWy12erW9Bi19Q0FlkUoUwykoZjJcFGxhBmyo=",
+  "Hash": "m7S687DkXCS9v4rF8vqtPsQHb1hUry/CmJvhTsj3JO0=",
   "Source": "aiExplainer",
   "BasePath": "_content/aiExplainer",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/marwan/Desktop/aiExplainer/wwwroot/images/aiexplainer.azurewebsites.net.png",
+      "SourceId": "aiExplainer",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/marwan/Desktop/aiExplainer/wwwroot/",
+      "BasePath": "_content/aiExplainer",
+      "RelativePath": "images/aiexplainer.azurewebsites.net.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/aiexplainer.azurewebsites.net.png"
     },
     {
       "Identity": "/Users/marwan/Desktop/aiExplainer/wwwroot/images/celebrate-overlay.gif",

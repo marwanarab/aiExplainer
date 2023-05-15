@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets/images/Mazars_Logo_2C_RGB.png"
     },
     {
+      "Id": "/Users/marwan/Desktop/aiExplainer/wwwroot/images/aiexplainer.azurewebsites.net.png",
+      "PackagePath": "staticwebassets/images/aiexplainer.azurewebsites.net.png"
+    },
+    {
       "Id": "/Users/marwan/Desktop/aiExplainer/wwwroot/images/celebrate-overlay.gif",
       "PackagePath": "staticwebassets/images/celebrate-overlay.gif"
     },
